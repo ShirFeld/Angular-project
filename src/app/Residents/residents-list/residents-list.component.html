@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>resident list</h3>
+  <div class="row">
+    <div *ngFor="let resident of residents" class="col-sm-6">
+      <div class="card">
+        <div class="row">
+          <div class="card-body col-sm-6">
+            <h5 class="card-title">{{ resident.Name }}</h5>
+            <p>Age: {{ resident.Age }}</p>
+            <p>City: {{ resident.City }}</p>
+            <p>Address: {{ resident.address }}</p>
+            <p>Start Year: {{ resident.startYear }}</p>
+            <a
+              [routerLink]="['/residents', resident.Id]"
+              class="btn btn-primary"
+              >Edit</a
+            >
+          </div>
+          <div class="col-sm-6 image-container">
+            <img
+              [src]="resident.Img"
+              alt="Profile picture"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+import { Injectable } from '@angular/core';
+import { map, Observable, of } from 'rxjs';
+import { ResidentArr } from './dummy-data';
+import Resident from './Resident';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class RegisterService {
+
+  constructor() { }
+
+  getResidents(): Observable<Resident[]> {
+    return of(ResidentArr);
+  }
+  
+  getResidentById(id: string): Observable<Resident> {
+    return this.getResidents().pipe(
+      map((residents: Resident[]) => residents.find((r) => r.Id === id))
+    );
+  }
+}
