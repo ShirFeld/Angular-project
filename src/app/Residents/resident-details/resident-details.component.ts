@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
 import Resident from '../Resident';
@@ -16,8 +16,12 @@ export class ResidentDetailsComponent implements OnInit {
  
   resident: Observable<Resident>;
 
-  constructor(private route: ActivatedRoute,private router: Router, private service: RegisterService) {}
+  constructor(private elementRef: ElementRef ,private route: ActivatedRoute,private router: Router, private service: RegisterService) {}
 
+  ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument
+        .body.style.backgroundColor = '#e1fbf5';
+}
   ngOnInit(): void {
     this.resident = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
