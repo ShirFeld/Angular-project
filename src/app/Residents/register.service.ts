@@ -11,12 +11,12 @@ export class RegisterService {
 
   constructor() { }
 
-  getResidents(): Observable<Resident[]> {
+  getResidentsService(): Observable<Resident[]> {
     return of(ResidentArr);
   }
   
   getResidentById(id: string): Observable<Resident> {
-    return this.getResidents().pipe(
+    return this.getResidentsService().pipe(
       map((residents: Resident[]) => residents.find((r) => r.Id === id))
     );
   }

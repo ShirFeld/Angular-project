@@ -4,24 +4,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResidentsModule } from './Residents/residents.module';
-import { EventsModule } from './events.module';
-import { EmploeeysModule } from './Employees/emploeeys.module';
-import { BusinessesModule } from './Businesses/businesses.module';
+import {BusinessesModule} from './Businesses/businesses.module'
 import { FormsModule } from '@angular/forms';
+import { HomePageComponent } from './home-page/home-page.component';
+import { EmployeesModule } from './employees/employees.module';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     ResidentsModule,
-    EventsModule,
-    EmploeeysModule,
     BusinessesModule,
+    EmployeesModule,
 
   ],
   providers: [],

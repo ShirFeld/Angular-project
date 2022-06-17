@@ -1,0 +1,53 @@
+<div class="container">
+    <br><br>
+    <h3 style="  text-decoration: underline;">Employee list:</h3>
+    <br>
+    <div class="row">
+      <div *ngFor="let employee of employees" class="col-sm-6">
+        <div class="card">
+          <div class="row">
+            <div class="card-body col-sm-6">
+              <h5 class="card-title">{{ employee.Name }}</h5>
+              <p>Age: {{ employee.Age }}</p>
+              <p>City: {{ employee.City }}</p>
+              <p>Work Name: {{ employee.WorkName }}</p>
+              <p>Monthly Hours: {{ employee.MonthlyHours }}</p>
+              <p>Hourly Wage: {{ employee.HourlyWage }}</p>
+              <br>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img style="border-radius: 32px;margin-top: 50px;" [src]="employee.Img"  alt="Profile picture"  class="card-img-top"  />
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <br><br><br><br>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Work Name</th>
+          <th scope="col">Monthly Hours</th>
+          <th scope="col">Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let employee of employees"
+          [ngStyle]="{'background-color': getRowColorBySalary(employee.MonthlyHours * employee.HourlyWage)}">
+
+          <td>{{ employee.Id}}</td>
+          <td>{{ employee.Name }}</td>
+          <td>{{ employee.Age }}</td>
+          <td>{{ employee.WorkName }}</td>
+          <td>{{ employee.MonthlyHours }}</td>
+          <td>{{ employee.MonthlyHours * employee.HourlyWage }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>

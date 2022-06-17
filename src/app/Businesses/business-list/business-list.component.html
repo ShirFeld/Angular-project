@@ -1,0 +1,27 @@
+<div class="container">
+  <br><br>
+  <h3 style="  text-decoration: underline;"> Business list:</h3>
+  <br>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>Work Name</th>
+        <th>Business Number</th>
+        <th>Number Of Employees</th>
+        <th>Average Profit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+      *ngFor="let business of businesses"
+      [ngStyle]="{'background-color': getRowColorByProfit(business.MonthlyProfit) }" >
+      
+      <td>{{ business.WorkName }}</td>
+      <td>{{ business.BusinessNumber }}</td>
+      <td>{{ business.Employees }}</td>
+      <td>{{ business.MonthlyProfit }}</td>
+    </tr>
+    </tbody>
+  </table>
+  
+</div>

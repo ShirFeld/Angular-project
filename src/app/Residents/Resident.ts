@@ -16,13 +16,21 @@ export default class Resident extends Person {
     this.Status = status;
   }
 
-  public get address(): string {
+  public get address() {
     return this._address;
   }
+
+  public set address(address: string) {
+     this._address = address;
+  }
  
-  public get startYear(): number {
+  public get startYear() {
     return this._startYear;
   }
+
+  public set startYear(startYear : number) {
+    this._startYear = startYear;  }
+
 
   public get Status() {
     return this._status;
@@ -49,5 +57,6 @@ export default class Resident extends Person {
             break;
     }
   }
+ 
 }
 

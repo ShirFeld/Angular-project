@@ -1,5 +1,7 @@
 <div class="container">
-  <h3>resident list</h3>
+  <br><br>
+  <h3 style="  text-decoration: underline;">List of residents:</h3>
+  <br>
   <div class="row">
     <div *ngFor="let resident of residents" class="col-sm-6">
       <div class="card">
@@ -10,21 +12,16 @@
             <p>City: {{ resident.City }}</p>
             <p>Address: {{ resident.address }}</p>
             <p>Start Year: {{ resident.startYear }}</p>
-            <a
-              [routerLink]="['/residents', resident.Id]"
-              class="btn btn-primary"
-              >Edit</a
-            >
+            <p>Status: {{ resident.Status }}</p>
+            <br>
+            <a [routerLink]="['/residents', resident.Id]"  class="btn btn-primary"  >Edit Details </a>
           </div>
-          <div class="col-sm-6 image-container">
-            <img
-              [src]="resident.Img"
-              alt="Profile picture"
-              class="profile-img"
-            />
+          <div class="card" style="width: 18rem;">
+            <img style="border-radius: 32px; margin-top: 50px;" [src]="resident.Img"  alt="Profile picture"  class="card-img-top"  />
           </div>
         </div>
       </div>
     </div>
+    <br>
   </div>
 </div>
