@@ -18,21 +18,26 @@ Run ng build to build the project. The build artifacts will be stored in the dis
 
 <br><br>
 
-## **3.Edit residents details**
+## **3.Edit residents details Page**
 
 <img style src="./src/assets/‏‏5.PNG" title="Residents Page" />
 
 <br><br>
 
-## **4. Business**
+## **4. Business Page**
 
 <img style src="./src/assets/‏‏3.PNG" title="Business Page" />
 
 <br><br>
 
-## **5. Employees**
+## **5. Employees Page**
 
 <img style src="./src/assets/‏‏4.PNG" title="Employees Page" />
 
 
----
+<br><br>
+
+## **6.Navbar & Footer**
+
+<img style src="./src/assets/‏‏6.PNG" title="Employees Page" />
+<img style src="./src/assets/‏‏7.PNG" title="Employees Page" />
