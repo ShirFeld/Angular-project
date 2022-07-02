@@ -17,7 +17,7 @@ export class RegisterService {
   
   getResidentById(id: string): Observable<Resident> {
     return this.getResidentsService().pipe(
-      map((residents: Resident[]) => residents.find((r) => r.Id === id))
+      map((resident: Resident[]) => resident.find((r) => r.Id === id))
     );
   }
 }
