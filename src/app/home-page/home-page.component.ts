@@ -7,6 +7,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
+  public isActive :boolean =false;
   constructor(private elementRef: ElementRef) { }
   
 //   ngAfterViewInit() {
@@ -16,4 +17,5 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
 }
